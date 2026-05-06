@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { supabase } from '../utils/supabaseClient'
 import { useAuth } from '../context/useAuth'
-import { format, isToday, isTomorrow, isPast } from 'date-fns'
+import { format, isToday, isTomorrow } from 'date-fns'
 import { CalendarClock, StickyNote, BookOpen, AlertCircle } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
