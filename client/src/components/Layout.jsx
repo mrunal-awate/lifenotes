@@ -2,9 +2,12 @@ import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import Sidebar from './Sidebar'
 import TopBar from './TopBar'
+import ReminderPopup from './ReminderPopup'
+import { useNotifications } from '../hooks/useNotifications'
 
 export default function Layout() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
+  useNotifications()
 
   return (
     <div className="flex h-screen bg-[#0f172a] overflow-hidden">
@@ -15,6 +18,7 @@ export default function Layout() {
           <Outlet />
         </main>
       </div>
+      <ReminderPopup />
     </div>
   )
 }
