@@ -11,7 +11,12 @@ const app = express()
 const PORT = process.env.PORT || 5000
 
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: [
+    'http://localhost:5173',
+    'https://unventable-mikaela-photolithographic.ngrok-free.dev',
+    /\.ngrok-free\.app$/,
+    /\.ngrok-free\.dev$/,
+  ],
   credentials: true,
 }))
 
